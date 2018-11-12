@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Handlee|Lato');
+@import 'reset';
+ 
+//font-family: 'Lato', sans-serif;
+//font-family: 'Handlee', cursive;
+// paleta: https://coolors.co/000000-5d737e-fff07c-f0f7ee-87bba2
+h1{
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Handlee', cursive;
+  margin: 50px;
+  text-transform: uppercase;
+}
+h1::before, h1::after{
+  content:'>>>';
+  margin: 0 20px;
+  color: #87BBA2;
+}
+h1::after{
+  content:'<<<';
+}
+
+
+#container{
+  max-width: 900px;
+  margin: auto;
+}
+
+#containerList{
+  margin: 20px 50px;
+  #containerSearch{
+    background: #87BBA2;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    #search{
+      display: flex;
+      ion-icon{
+        font-size: 30px;
+        color: black;
+      }
+      input{
+        font-family: 'Lato', sans-serif;
+        background: none;
+        font-size: 24px;
+        border: none;
+        margin: 0 10px;
+        }
+        input:focus{
+          outline: none;
+        }
+      ::placeholder{
+        color: black;
+      }     
+    }
+    #filter{
+      display: flex;
+      align-items: center;
+      .filterLabel{
+        cursor: pointer;
+        font-family: 'Lato', sans-serif;
+        background: none;
+        font-size: 18px;
+        text-transform: uppercase;
+        border: none;
+        margin: 0 10px;
+      }
+      .active{
+        background: white;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      .checkContainer{
+        display: flex;
+        .check{
+          display: flex;
+        }
+        ion-icon{
+          font-size: 18px;
+          margin: 2px;
+        }
+      }
+    } 
+  }
+  
+  div{
+    #addTask{
+          display: flex;
+          align-items: center;
+          background: #FFF07C;
+          border-bottom: solid #0000001c 1px;
+          border-radius: 15px 15px 0 0;
+          padding: 10px 40px;
+      form{
+        display: flex;
+        flex: 1;
+      }
+          input{
+            flex: 1;
+            padding: 10px;
+            font-family: 'Lato', sans-serif;
+            background: none;
+            font-size: 24px;
+            color: black;
+            border: none;
+            margin: 0 10px;
+          }
+          input:focus{
+            outline: none;
+          }
+          ::placeholder{
+            color: black;
+          }
+          button{
+            padding: 0;
+            background: none;
+            border: none;
+            ion-icon{
+              font-size: 28px;
+              color: black;
+            }
+          }
+        }
+    #list{
+      li:last-child{
+        border-radius: 0 0 15px 15px;
+      }
+      li{
+        text-align: left;
+        background: #FFF07C;
+        font-size: 24px;
+        padding: 10px 40px;
+        border-bottom: solid #0000001c 1px;
+        font-family: 'Lato', sans-serif;
+        div{
+          display: flex;
+          padding: 10px;
+          align-items: center;
+          ion-icon{
+            color: black;
+          }
+          ion-icon[name=checkbox-outline]{
+            display: none;
+          }
+          span{
+            margin: 0 10px;
+          }
+        }
+      }
+      .completed{
+        background: #F0F7EE;
+        color: #5D737E;
+        ion-icon[name=square-outline]{
+          display: none;
+        }
+        ion-icon[name=checkbox-outline]{
+          display: block;
+          color: #5D737E;
+        }
+        span{
+          text-decoration: line-through;
+        }
+      }
+    }
+  }  
+}
+
+@media (max-width: 750px) {
+  #containerList{
+    margin: 20px 25px;
+    #containerSearch{
+      flex-direction: column;
+      #search{
+        margin-bottom: 7px;
+        justify-content: center;
+        input{
+          font-size: 18px;
+          margin: 0 10px;
+          border: 1px solid #ffffff63;
+          border-radius: 5px;
+          padding: 5px;
+        }
+      }
+      #filter{
+        justify-content: space-evenly;
+      }
+    }
+    div{
+      #addTask{
+        input{
+          font-size: 18px;
+        }
+      }
+      #list{
+        li{
+          font-size: 18px; 
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  #containerList{
+    margin: 0px 0px;
+    #containerSearch{
+      flex-direction: column;
+      #search{
+        margin-bottom: 7px;
+        justify-content: center;
+        input{
+          font-size: 18px;
+          margin: 0 10px;
+          border: 1px solid #ffffff63;
+          border-radius: 5px;
+          padding: 5px;
+        }
+      }
+      #filter{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .filterLabel{
+          font-size: 16px;
+        }
+      }
+    }
+    div{
+      #addTask{
+        padding: 10px 20px;
+        button{
+          ion-icon{
+            font-size: 25px;
+          }
+        }
+        input{
+          width: 100%;
+          font-size: 18px;
+        }
+      }
+      #list{
+        li{
+          padding: 10px 10px;
+          font-size: 18px; 
+        }
+      }
+    }
+  }
+}

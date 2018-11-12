@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Handlee|Lato");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Handlee', cursive;
+  margin: 50px;
+  text-transform: uppercase; }
+
+h1::before, h1::after {
+  content: '>>>';
+  margin: 0 20px;
+  color: #87BBA2; }
+
+h1::after {
+  content: '<<<'; }
+
+#container {
+  max-width: 900px;
+  margin: auto; }
+
+#containerList {
+  margin: 20px 50px; }
+  #containerList #containerSearch {
+    background: #87BBA2;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-evenly; }
+    #containerList #containerSearch #search {
+      display: flex; }
+      #containerList #containerSearch #search ion-icon {
+        font-size: 30px;
+        color: black; }
+      #containerList #containerSearch #search input {
+        font-family: 'Lato', sans-serif;
+        background: none;
+        font-size: 24px;
+        border: none;
+        margin: 0 10px; }
+      #containerList #containerSearch #search input:focus {
+        outline: none; }
+      #containerList #containerSearch #search ::placeholder {
+        color: black; }
+    #containerList #containerSearch #filter {
+      display: flex;
+      align-items: center; }
+      #containerList #containerSearch #filter .filterLabel {
+        cursor: pointer;
+        font-family: 'Lato', sans-serif;
+        background: none;
+        font-size: 18px;
+        text-transform: uppercase;
+        border: none;
+        margin: 0 10px; }
+      #containerList #containerSearch #filter .active {
+        background: white;
+        padding: 5px;
+        border-radius: 10px; }
+      #containerList #containerSearch #filter .checkContainer {
+        display: flex; }
+        #containerList #containerSearch #filter .checkContainer .check {
+          display: flex; }
+        #containerList #containerSearch #filter .checkContainer ion-icon {
+          font-size: 18px;
+          margin: 2px; }
+  #containerList div #addTask {
+    display: flex;
+    align-items: center;
+    background: #FFF07C;
+    border-bottom: solid #0000001c 1px;
+    border-radius: 15px 15px 0 0;
+    padding: 10px 40px; }
+    #containerList div #addTask form {
+      display: flex;
+      flex: 1; }
+    #containerList div #addTask input {
+      flex: 1;
+      padding: 10px;
+      font-family: 'Lato', sans-serif;
+      background: none;
+      font-size: 24px;
+      color: black;
+      border: none;
+      margin: 0 10px; }
+    #containerList div #addTask input:focus {
+      outline: none; }
+    #containerList div #addTask ::placeholder {
+      color: black; }
+    #containerList div #addTask button {
+      padding: 0;
+      background: none;
+      border: none; }
+      #containerList div #addTask button ion-icon {
+        font-size: 28px;
+        color: black; }
+  #containerList div #list li:last-child {
+    border-radius: 0 0 15px 15px; }
+  #containerList div #list li {
+    text-align: left;
+    background: #FFF07C;
+    font-size: 24px;
+    padding: 10px 40px;
+    border-bottom: solid #0000001c 1px;
+    font-family: 'Lato', sans-serif; }
+    #containerList div #list li div {
+      display: flex;
+      padding: 10px;
+      align-items: center; }
+      #containerList div #list li div ion-icon {
+        color: black; }
+      #containerList div #list li div ion-icon[name=checkbox-outline] {
+        display: none; }
+      #containerList div #list li div span {
+        margin: 0 10px; }
+  #containerList div #list .completed {
+    background: #F0F7EE;
+    color: #5D737E; }
+    #containerList div #list .completed ion-icon[name=square-outline] {
+      display: none; }
+    #containerList div #list .completed ion-icon[name=checkbox-outline] {
+      display: block;
+      color: #5D737E; }
+    #containerList div #list .completed span {
+      text-decoration: line-through; }
+
+@media (max-width: 750px) {
+  #containerList {
+    margin: 20px 25px; }
+    #containerList #containerSearch {
+      flex-direction: column; }
+      #containerList #containerSearch #search {
+        margin-bottom: 7px;
+        justify-content: center; }
+        #containerList #containerSearch #search input {
+          font-size: 18px;
+          margin: 0 10px;
+          border: 1px solid #ffffff63;
+          border-radius: 5px;
+          padding: 5px; }
+      #containerList #containerSearch #filter {
+        justify-content: space-evenly; }
+    #containerList div #addTask input {
+      font-size: 18px; }
+    #containerList div #list li {
+      font-size: 18px; } }
+@media (max-width: 400px) {
+  #containerList {
+    margin: 0px 0px; }
+    #containerList #containerSearch {
+      flex-direction: column; }
+      #containerList #containerSearch #search {
+        margin-bottom: 7px;
+        justify-content: center; }
+        #containerList #containerSearch #search input {
+          font-size: 18px;
+          margin: 0 10px;
+          border: 1px solid #ffffff63;
+          border-radius: 5px;
+          padding: 5px; }
+      #containerList #containerSearch #filter {
+        flex-wrap: wrap;
+        justify-content: space-evenly; }
+        #containerList #containerSearch #filter .filterLabel {
+          font-size: 16px; }
+    #containerList div #addTask {
+      padding: 10px 20px; }
+      #containerList div #addTask button ion-icon {
+        font-size: 25px; }
+      #containerList div #addTask input {
+        width: 100%;
+        font-size: 18px; }
+    #containerList div #list li {
+      padding: 10px 10px;
+      font-size: 18px; } }
+
+/*# sourceMappingURL=App.css.map */
